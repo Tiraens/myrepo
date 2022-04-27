@@ -1,8 +1,0 @@
-
-- test1/
--- test11/
--- test12/
---- .gitignore
---- compiler.xml
-- test2/
--- misc.xml

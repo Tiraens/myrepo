@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flowers xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+          xs:schemaLocation="flowers.xsd">
+    <flower>
+        <name> Chamomile </name>
+        <soil> Podzolistaya </soil>
+        <origin> Russia </origin>
+        <visualParameters>
+            <stemColor>Green</stemColor>
+            <leaveColor>Green</leaveColor>
+            <averageLength>20</averageLength>
+        </visualParameters>
+        <growingTips>
+            <temperature>22</temperature>
+            <lighting>true</lighting>
+        </growingTips>
+    </flower>
+    <flower>
+        <name> Rose </name>
+        <soil> Dern </soil>
+        <origin> Belarus </origin>
+        <visualParameters>
+            <stemColor>Red</stemColor>
+            <leaveColor>Green</leaveColor>
+            <averageLength>30</averageLength>
+        </visualParameters>
+        <growingTips>
+            <temperature>25</temperature>
+            <lighting>false</lighting>
+        </growingTips>
+    </flower>
+</flowers>

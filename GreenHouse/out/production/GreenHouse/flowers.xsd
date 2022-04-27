@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="flowers" type="flowersType"/>
+  <xs:complexType name="visualParametersType">
+    <xs:sequence>
+      <xs:element name="stemColor">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Green"/>
+            <xs:enumeration value="Red"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="leaveColor"/>
+      <xs:element name="averageLength">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <xs:minInclusive value="5"/>
+            <xs:maxInclusive value="50"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="growingTipsType">
+    <xs:sequence>
+      <xs:element name="temperature">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="45"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="lighting">
+        <xs:simpleType>
+          <xs:restriction base="xs:boolean">
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="flowerType">
+    <xs:sequence>
+      <xs:element name="name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value=" Chamomile "/>
+            <xs:enumeration value=" Rose "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="soil">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value=" Podzolistaya "/>
+            <xs:enumeration value=" Dern "/>
+            <xs:enumeration value=" Podzolistiy Dern "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="origin">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value=" Russia "/>
+            <xs:enumeration value=" Belarus "/>
+            <xs:enumeration value=" China "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="visualParametersType" name="visualParameters"/>
+      <xs:element type="growingTipsType" name="growingTips"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="flowersType">
+    <xs:sequence>
+      <xs:element type="flowerType" name="flower" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
